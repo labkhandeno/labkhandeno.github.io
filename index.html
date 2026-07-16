@@ -9,52 +9,51 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&display=swap');
-     
+  
         :root {
             --primary: #1e40af;
         }
-     
+  
         body {
             font-family: 'Vazirmatn', sans-serif;
         }
-     
+  
         .hero-bg {
             background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
         }
-     
+  
         .nav-link {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-     
+  
         .nav-link:hover {
             transform: translateY(-2px);
             color: #60a5fa !important;
         }
-     
+  
         .service-card {
             transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
         }
-     
+  
         .service-card:hover {
             transform: translateY(-15px) scale(1.03);
             box-shadow: 0 25px 50px -12px rgb(30 64 175 / 0.4);
         }
-     
+  
         .hero-doctor {
             transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
-     
+  
         .hero-doctor:hover {
             transform: scale(1.05) rotate(2deg);
         }
-     
+  
         .gradient-text {
             background: linear-gradient(90deg, #60a5fa, #a5b4fc);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        
-        /* Rounded service images */
+     
         .service-img-container {
             width: 100%;
             min-height: 160px;
@@ -66,23 +65,33 @@
             overflow: hidden;
             margin-bottom: 1.5rem;
         }
-        
+     
         .service-img {
             max-height: 220px;
             width: auto;
             object-fit: contain;
-            border-radius: 20px; /* گرد کردن عکس‌های خدمات */
+            border-radius: 20px;
         }
-        
+
+        /* بهبود نمایش در موبایل */
         @media (max-width: 768px) {
-            h1 { font-size: 2.5rem !important; }
-            h2 { font-size: 2rem !important; }
-            h3 { font-size: 1.5rem !important; }
-            .text-5xl { font-size: 2.25rem !important; }
-            .text-7xl { font-size: 2.75rem !important; }
-            p { font-size: 1rem !important; }
+            h1 { font-size: 2.35rem !important; }
+            h2 { font-size: 1.65rem !important; }
+            h3 { font-size: 1.4rem !important; }
+            .text-5xl { font-size: 2.05rem !important; }
+            .text-7xl { font-size: 2.55rem !important; }
+            p { font-size: 0.93rem !important; }
+           
+            .special-offer-text {
+                font-size: 1.3rem !important;
+                line-height: 1.55 !important;
+            }
+
+            .appointment-box {
+                padding: 2rem 1.25rem !important;
+            }
         }
-        /* Image Modal */
+
         .image-modal {
             display: none;
             position: fixed;
@@ -120,59 +129,59 @@
                     <span class="text-2xl font-bold text-blue-700">لبخند نو</span>
                 </div>
             </div>
-         
+      
             <div class="hidden md:flex items-center gap-8 text-lg font-medium">
                 <a href="#services" class="nav-link text-slate-700 hover:text-blue-600">خدمات</a>
                 <a href="#about" class="nav-link text-slate-700 hover:text-blue-600">درباره ما</a>
                 <a href="#team" class="nav-link text-slate-700 hover:text-blue-600">تیم</a>
                 <a href="#contact" class="nav-link text-slate-700 hover:text-blue-600">تماس</a>
             </div>
-         
+      
             <a href="#appointment" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-2xl font-semibold flex items-center gap-2 transition-all">
                 <i class="fas fa-calendar-check"></i>
                 رزرو وقت
             </a>
         </div>
     </nav>
+
     <!-- Hero Section -->
     <section class="hero-bg text-white min-h-screen flex items-center relative overflow-hidden">
         <div class="absolute inset-0 opacity-10">
             <div class="absolute top-20 left-10 text-[300px] text-white">🦷</div>
             <div class="absolute bottom-10 right-20 text-[250px] text-white rotate-12">✨</div>
         </div>
-     
+  
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center py-20 relative z-10">
             <div class="space-y-8" data-aos="fade-up">
                 <div class="inline-flex items-center bg-white/20 backdrop-blur-md px-6 py-2 rounded-3xl text-sm font-medium">
                     <span class="w-3 h-3 bg-green-400 rounded-full animate-pulse mr-2"></span>
                     کلینیک تخصصی دندانپزشکی لبخند نو
                 </div>
-             
+          
                 <h1 class="text-5xl md:text-7xl font-bold leading-tight">
                     لبخندی <span class="gradient-text">سالم</span><br>
                     اعتماد به نفسی <span class="gradient-text">ماندگار</span>
                 </h1>
-             
+          
                 <p class="text-xl text-blue-100 max-w-lg">
                     ارائه خدمات کامل دندانپزشکی با تجهیزات مدرن، پزشکان مجرب و محیطی آرام و بدون استرس
                 </p>
-             
+          
                 <div class="flex flex-wrap gap-4">
-                    <a href="#appointment" class="bg-white text-blue-700 hover:bg-blue-50 px-10 py-5 rounded-3xl text-xl font-semibold flex items-center gap-3 transition-all shadow-xl">
+                    <a href="#appointment" class="bg-white text-blue-700 hover:bg-blue-50 px-6 py-4 md:px-10 md:py-5 rounded-3xl text-base md:text-xl font-semibold flex items-center gap-3 transition-all shadow-xl">
                         <i class="fas fa-calendar"></i>
                         رزرو مشاوره رایگان
                     </a>
-                 
-                    <a href="tel:021-88776655" class="border-2 border-white/80 hover:bg-white/10 px-8 py-5 rounded-3xl text-xl font-medium flex items-center gap-3 transition-all">
+              
+                    <a href="tel:021-88776655" class="border-2 border-white/80 hover:bg-white/10 px-6 py-4 md:px-8 md:py-5 rounded-3xl text-base md:text-xl font-medium flex items-center gap-3 transition-all">
                         <i class="fas fa-phone"></i>
                         تماس
                     </a>
                 </div>
             </div>
-         
-            <!-- Doctor Image - با نام دکتر زیر آن -->
+      
             <div class="relative" data-aos="fade-left">
-                <div class="absolute -inset-6 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-[4rem] -rotate-6"></div>
+                <div class="absolute -inset-6 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-[4rem] -rotate-6 -z-10"></div>
                 <img src="sa.png" alt="دکتر حمیدرضا محمدی" class="hero-doctor relative w-full max-w-lg mx-auto rounded-[3rem] shadow-2xl border-8 border-white object-cover">
                 <div class="text-center mt-6">
                     <span class="text-3xl font-bold text-white">دکتر حمیدرضا محمدی</span>
@@ -180,6 +189,7 @@
             </div>
         </div>
     </section>
+
     <!-- Trust Bar -->
     <div class="bg-white py-6 shadow">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-3 md:grid-cols-6 gap-8 items-center text-center">
@@ -191,18 +201,17 @@
             <div class="flex flex-col items-center"><i class="fas fa-car text-4xl text-blue-600 mb-2"></i><div class="font-semibold">پارکینگ</div></div>
         </div>
     </div>
+
     <!-- Services -->
-    <section id="services" class="py-24 bg-slate-100">
+    <section id="services" class="py-20 bg-slate-100">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-5xl font-bold mb-3">لبخند شما را کامل می‌کنیم 🤍</h2>
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-3 whitespace-nowrap">لبخند شما را کامل می‌کنیم 🤍</h2>
                 <p class="max-w-2xl mx-auto text-lg text-slate-600">ارائه طیف کامل خدمات دندانپزشکی با بالاترین استانداردهای جهانی</p>
             </div>
-            <div class="text-center mb-10">
-                <span class="inline-block px-8 py-3 bg-blue-100 text-blue-700 rounded-full text-lg font-semibold">خدمات ما</span>
-            </div>
-         
+            
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- چهار کارت خدمات -->
                 <div class="service-card bg-white rounded-3xl p-8 shadow-xl" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-img-container">
                         <img src="i.jpg" alt="ایمپلنت" class="service-img cursor-pointer" onclick="showImage(this.src)">
@@ -214,6 +223,7 @@
                         <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> بدون درد و سریع</li>
                     </ul>
                 </div>
+
                 <div class="service-card bg-white rounded-3xl p-8 shadow-xl" data-aos="fade-up" data-aos-delay="200">
                     <div class="service-img-container">
                         <img src="L.jpg" alt="لمینیت" class="service-img cursor-pointer" onclick="showImage(this.src)">
@@ -225,6 +235,7 @@
                         <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> کامپوزیت ونیر</li>
                     </ul>
                 </div>
+
                 <div class="service-card bg-white rounded-3xl p-8 shadow-xl" data-aos="fade-up" data-aos-delay="300">
                     <div class="service-img-container">
                         <img src="a.jpg" alt="ارتودنسی" class="service-img cursor-pointer" onclick="showImage(this.src)">
@@ -236,6 +247,7 @@
                         <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> بریس شفاف</li>
                     </ul>
                 </div>
+
                 <div class="service-card bg-white rounded-3xl p-8 shadow-xl" data-aos="fade-up" data-aos-delay="400">
                     <div class="service-img-container">
                         <img src="j.jpg" alt="جرم‌گیری" class="service-img cursor-pointer" onclick="showImage(this.src)">
@@ -250,33 +262,32 @@
             </div>
         </div>
     </section>
-    <!-- Image Modal -->
-    <div id="imageModal" class="image-modal">
-        <span class="close-modal" onclick="closeModal()">×</span>
-        <img id="modalImage" class="modal-content" onclick="closeModal()">
-    </div>
+
     <!-- Special Offer -->
-    <section class="py-20 bg-gradient-to-r from-blue-700 to-indigo-700 text-white">
+    <section class="py-16 bg-gradient-to-r from-blue-700 to-indigo-700 text-white">
         <div class="max-w-4xl mx-auto text-center px-6" data-aos="zoom-in">
             <div class="inline-flex items-center gap-2 bg-white/20 px-8 py-3 rounded-full mb-8">
                 <span class="text-3xl">🎁</span>
                 <span class="font-bold text-xl">پیشنهاد ویژه</span>
             </div>
-            <h2 class="text-5xl font-bold mb-6">مشاوره و معاینه اولیه رایگان + ۳۰٪ تخفیف خدمات زیبایی</h2>
-            <p class="text-xl mb-10">تا پایان ماه جاری</p>
-            <a href="#appointment" class="inline-flex items-center gap-3 bg-white text-blue-700 hover:bg-yellow-300 transition-all text-2xl font-bold px-16 py-8 rounded-3xl">
+            <h2 class="special-offer-text text-2xl md:text-4xl font-bold mb-10 leading-relaxed tracking-wide">
+                مشاوره و معاینه اولیه رایگان<br>
+                + ۳۰٪ تخفیف خدمات زیبایی
+            </h2>
+            <p class="text-xl mb-10">فقط تا پایان تیر ماه!</p>
+            <a href="#appointment" class="inline-flex items-center gap-3 bg-white text-blue-700 hover:bg-yellow-300 transition-all text-base md:text-2xl font-bold px-8 py-5 md:px-16 md:py-8 rounded-3xl">
                 رزرو مشاوره رایگان
                 <i class="fas fa-arrow-left"></i>
             </a>
         </div>
     </section>
-    <!-- Doctor Profile -->
+
+    <!-- Team -->
     <section id="team" class="py-24">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid md:grid-cols-12 gap-12 items-center">
                 <div class="md:col-span-5" data-aos="fade-right">
                     <img src="sa.png" alt="دکتر حمیدرضا محمدی" class="rounded-3xl shadow-2xl w-full">
-                    <!-- متن نام دکتر حذف شد -->
                 </div>
                 <div class="md:col-span-7 space-y-8" data-aos="fade-left">
                     <div>
@@ -291,70 +302,42 @@
             </div>
         </div>
     </section>
+
     <!-- CTA Appointment -->
     <section id="appointment" class="py-20 bg-slate-900 text-white">
         <div class="max-w-2xl mx-auto text-center px-6">
-            <h2 class="text-5xl font-bold mb-6">آماده‌اید لبخندتان را تغییر دهید؟</h2>
+            <h2 class="text-2xl md:text-3xl font-bold mb-8 leading-tight whitespace-nowrap">آماده‌اید لبخندتان را تغییر دهید؟</h2>
             <p class="text-xl mb-10">اولین مشاوره شما کاملاً رایگان است</p>
-         
-            <form id="appointmentForm" class="space-y-6 bg-white/10 backdrop-blur-lg p-10 rounded-3xl">
-                <div class="grid grid-cols-2 gap-6">
-                    <input type="text" placeholder="نام و نام خانوادگی" class="bg-white/10 border border-white/30 rounded-2xl px-6 py-6 text-white placeholder:text-white/60 focus:outline-none focus:border-blue-400 text-right">
-                    <input type="tel" placeholder="شماره موبایل" class="bg-white/10 border border-white/30 rounded-2xl px-6 py-6 text-white placeholder:text-white/60 focus:outline-none focus:border-blue-400 text-right">
+      
+            <form id="appointmentForm" class="space-y-6 bg-white/10 backdrop-blur-lg p-8 md:p-12 rounded-3xl appointment-box">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <input type="text" placeholder="نام و نام خانوادگی" class="bg-white/10 border border-white/30 rounded-2xl px-5 py-4 md:px-6 md:py-6 text-white text-sm md:text-base placeholder:text-white/60 focus:outline-none focus:border-blue-400 text-right w-full">
+                    <input type="tel" placeholder="شماره موبایل" class="bg-white/10 border border-white/30 rounded-2xl px-5 py-4 md:px-6 md:py-6 text-white text-sm md:text-base placeholder:text-white/60 focus:outline-none focus:border-blue-400 text-right w-full">
                 </div>
-                <input type="text" placeholder="نوع خدمات مورد نظر (مثلاً ایمپلنت، لمینت)" class="w-full bg-white/10 border border-white/30 rounded-2xl px-6 py-6 text-white placeholder:text-white/60 focus:outline-none focus:border-blue-400 text-right">
-             
-                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 py-7 text-2xl font-bold rounded-3xl transition-all active:scale-95">
+               
+                <input type="text"
+                       placeholder="نوع خدمات مورد نظر (مثلاً ایمپلنت، لمینت)"
+                       class="bg-white/10 border border-white/30 rounded-2xl px-5 py-4 md:px-6 md:py-6 text-white text-sm md:text-base placeholder:text-white/60 focus:outline-none focus:border-blue-400 text-right w-full">
+                
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 py-6 md:py-8 text-lg md:text-2xl font-bold rounded-3xl transition-all active:scale-95">
                     ارسال درخواست رزرو
                 </button>
             </form>
         </div>
     </section>
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-white pt-20 pb-10">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-12">
-                <div>
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-4xl overflow-hidden">
-                            <img src="Lo.png" alt="لبخند نو" class="w-10 h-10 object-cover">
-                        </div>
-                        <span class="text-3xl font-bold">لبخند نو</span>
-                    </div>
-                    <p class="text-slate-400">کلینیک دندانپزشکی مدرن با تمرکز بر زیبایی و سلامت دهان و دندان</p>
-                </div>
-                <div>
-                    <h4 class="font-bold text-lg mb-6">خدمات ما</h4>
-                    <ul class="space-y-3 text-slate-400">
-                        <li><a href="#" class="hover:text-white">ایمپلنت دندان</a></li>
-                        <li><a href="#" class="hover:text-white">لمینت سرامیکی</a></li>
-                        <li><a href="#" class="hover:text-white">ارتودنسی نامرئی</a></li>
-                        <li><a href="#" class="hover:text-white">کامپوزیت ونیر</a></li>
-                        <li><a href="#" class="hover:text-white">جرم‌گیری</a></li>
-                        <li><a href="#" class="hover:text-white">بلیچینگ</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold text-lg mb-6">تماس با ما</h4>
-                    <div class="space-y-4">
-                        <a href="tel:02188776655" class="flex items-center gap-3 hover:text-blue-400"><i class="fas fa-phone"></i> ۰۲۱-۸۸۷۷۶۶۵۵</a>
-                        <div class="flex items-center gap-3"><i class="fas fa-map-marker-alt"></i><span>تهران، سعادت آباد، بلوار سرو، پلاک ۱۲۵</span></div>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="font-bold text-lg mb-6">ساعات کاری</h4>
-                    <div class="text-slate-400 space-y-2">
-                        <div>شنبه تا چهارشنبه: ۹ صبح - ۹ شب</div>
-                        <div>پنجشنبه: ۹ صبح - ۶ عصر</div>
-                        <div class="text-green-400 font-medium">جمعه‌ها: با هماهنگی قبلی</div>
-                    </div>
-                </div>
-            </div>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="image-modal">
+        <div class="relative">
+            <span class="close-modal" onclick="closeModal()">×</span>
+            <img id="modalImage" class="modal-content" alt="تصویر بزرگ">
         </div>
-    </footer>
+    </div>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 800, once: true });
+      
         function showImage(src) {
             document.getElementById('modalImage').src = src;
             document.getElementById('imageModal').style.display = 'flex';
